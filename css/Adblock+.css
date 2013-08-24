@@ -1,0 +1,23 @@
+﻿@charset "utf-8";
+/* Name: AdBlock+ */
+
+/*div [style]  (将网页中的所有的DIV彻底屏蔽)
+ {display: none !important;}*/
+
+/* 以下是收藏的各种常用的显示方式
+ {display:none;}
+ {display: none !important;}
+ {display:block !important;}
+ {width:100% !important;}
+ {width:auto !important;}
+ */
+
+/* 去除网页背景
+ html>body{background: none !important;}
+ */
+
+/********** Sites **********/
+
+{ display: none !important }
+
+

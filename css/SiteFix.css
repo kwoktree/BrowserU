@@ -1,0 +1,50 @@
+@-moz-document domain("acfun.tv"){
+.area{margin: 0px auto !important;}
+}
+@-moz-document domain("www.amazon.cn"){
+body{margin-top: 10px !important;}
+}
+@-moz-document domain("www.hotsk.com"){
+div[align="left"]{margin: 0px auto !important;width: 960px !important;}
+}
+@-moz-document domain("auto.ifeng.com"){
+a {border-bottom: none !important;}
+}
+@-moz-document domain("bbs.operachina.com"){
+article.a101921,article.a81164,article.a99512,article.a588 {display: none !important;}
+}
+@-moz-document domain("pcbeta.com"){
+div[id="wp7_banner"],div[id="sitefocus"],div[style="padding:0 10px 10px;background:#d0dae4;"],div[style$="#d0dae4;"][class="wp"]{display:none !important}
+ul[class="forum_top_sub"],ul[class="forum_top"],div[style*="padding:9px;width:980px;height:437px;"]{display:none !important}
+}
+@-moz-document domain("finance.sina.com.cn"){
+.secondaryHeader {margin: 0px !important;}
+}
+@-moz-document domain("item.taobao.com"){
+.content p font { font-size: 20px !important; }
+}
+@-moz-document domain("www.tianya.cn"){
+.pagewrap {margin-top: 10px !important;}
+}
+@-moz-document domain("www.top81.cn"){
+[class^="thread_"] li {margin-left: 30px !important;}
+[class^="thread_"] li:first-child {margin-left: 0px !important;}
+}
+@-moz-document domain("www.u17.com"){
+div[class="www_hd_middle_ct"],div[class="www_hd_middle_rt"],div[class="pd_b_13"],span[class="icon_clo"]{display:none!important;}
+div.ui-dialog.ui-widget.ui-widget-content.ui-corner-all,
+div.ui-widget-overlay{
+display:none!important;
+}
+}
+@-moz-document domain("yingzheng.com"){
+div[id^="portal_block_"][class="block move-span"],div[class="dxb_bc"],td[class="plc plm"]{display:none !important;}
+}
+@-moz-document domain("soku.com"){
+div[class^="aa_"],div[id^="ab_"],[id*="Ad"],[class^="AB"]{ display: none !important }
+.row_index_1{height:641px!important;}
+}
+@-moz-document domain("youku.com"){
+div[class^="aa_"],div[id^="ab_"],[id*="Ad"],[class^="AB"]{ display: none !important }
+.row_index_1{height:641px!important;}
+}

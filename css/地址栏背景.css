@@ -1,0 +1,16 @@
+
+/*地址栏背景一体化*/
+#urlbar{box-shadow: none !important;
+background-color: transparent !important;
+border: none !important;}
+
+/*搜索栏背景一体化*/
+#searchbar .searchbar-textbox {
+       background-color: transparent !important;
+}
+#searchbar .searchbar-textbox:hover{ 
+       -moz-appearance: none !important; 
+}
+#searchbar .searchbar-textbox[focused="true"]{ 
+       -moz-appearance: none !important; 
+}

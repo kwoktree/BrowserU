@@ -1,0 +1,29 @@
+#PersonalToolbar[collapsed="true"] {
+
+    -moz-transition: none !important;
+
+   }
+
+
+
+#PersonalToolbar:not([collapsed="true"]) {
+
+    visibility: collapse !important;
+
+    opacity: 0.5;
+
+    -moz-transition: visibility 0s, opacity 0s ease !important;
+
+   }
+
+
+
+#navigator-toolbox:hover #PersonalToolbar:not([collapsed="true"]) {
+
+    visibility: visible !important;
+
+    opacity: 1;
+
+    -moz-transition: visibility !important;
+
+   }

@@ -1,0 +1,22 @@
+﻿@charset "utf-8";
+/*
+Name: /微软雅黑
+Version:2.35
+Description: Font Style.
+*/
+
+body[id="nv_forum"],div[align="center"],div[class^="body"],div[class="layout"],div[class="col"],div[class^="focus"],
+div[class="area"],div[class^="bbs"],div[class="main"],div[id="main"],div[id="primary"],div[class="para"],div[class="note"] {
+font-family: "YaHeiConsolas", "Microsoft YaHei", "微软雅黑", "Trebuchet MS", "Tahoma", "SimSun", "宋体"  !important;
+}
+
+pre, code, kbd, samp, var {
+font-family: "Courier New", "Tahoma", "Microsoft Yahei",  monospace !important;
+}
+
+/
+*don't use div[class="wrap"],div[class^="content"],div[id^="content"]*
+*{font-weight:100!important;}
+*{text-shadow: #666 0px 0px 1px !important;}/* 页面字体阴影会让页面变卡 */
+/
+

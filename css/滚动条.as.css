@@ -1,0 +1,125 @@
+@-moz-document url-prefix(http://),
+url-prefix(https://),
+url("chrome://browser/content/bookmarks/bookmarksPanel.xul"),
+url("chrome://browser/content/browser.xul"),
+url("chrome://browser/content/history/history-panel.xul") {
+
+
+/* 垂直滚动条 */
+scrollbar *
+scrollbar scrollbarbutton { display: none ! important; }
+scrollbar scrollbarbutton { visibility: collapse !important }
+
+scrollbar[orient="vertical"]
+{
+-moz-appearance: none !important;
+background-color: transparent !important; background-image: none !important; /* 滚动条背景透明 */
+min-width: 4px !important;
+max-width: 4px !important;
+-moz-margin-start: -4px !important; /* 把滚动条位置移到屏幕外，这里的像素应该等于垂直滚动条宽度的负值 */
+position: relative !important; /* 更改滚动条的定位方式为相对 */
+z-index: 2147483647 !important; /* 把滚动条提到Z轴最上层 */
+}
+
+/* 可以改变垂直滚动条的宽度，默认17px（必须同时改变，最小宽度和最大宽度完全相同） */
+/* 默认的垂直滚动条的宽度是17px */
+scrollbar[orient="vertical"]:hover
+{
+-moz-appearance: none !important;
+background-color: transparent !important; background-image: none !important;
+min-width: 4px !important;
+max-width: 4px !important;
+-moz-margin-start: -4px !important;
+position: relative !important;
+z-index: 2147483647 !important;
+}
+
+/* 滚动条按钮 */
+scrollbar thumb[orient="vertical"]
+{
+-moz-appearance: none !important;
+background-color: rgba(0,100,255,.5) !important;
+border-radius: 0px !important;
+min-width: 4px !important;
+max-width: 4px !important;
+border: 1px !important; /* 滚动条按钮边框 */
+border-color: rgba(0,100,255,.75) !important;  /* 滚动条按钮边框颜色和透明度 */
+border-style: none none none solid !important; /* 垂直滚动条按钮的左边框样式 */
+}
+
+/* 鼠标悬停样式: 滚动条按钮 */
+scrollbar thumb[orient="vertical"]:hover
+{
+background-color: rgba(0,100,255,.75) !important;
+border-radius: 0px !important;
+border: 0px !important;
+}
+
+/* 点击拖动样式：滚动条按钮 */ 
+scrollbar thumb[orient="vertical"]:active
+{
+background-color: rgba(0,100,255,.75) !important;
+border-radius: 0px !important;
+border: 0px !important;
+}
+
+/* 水平滚动条 */
+scrollbar[orient="horizontal"]
+{
+-moz-appearance: none !important;
+background-color: transparent !important; background-image: none !important;
+min-height: 4px !important;
+max-height: 4px !important;
+margin-top: -4px !important; /* 把滚动条位置移到屏幕外，这里的像素应该等于水平滚动条高度的负值 */
+position: relative !important; 
+z-index: 2147483647 !important;
+}
+
+/* 可以改变水平滚动条的高度，默认17px（必须同时改变，最小高度和最大高度完全相同） */
+/* 默认高度是17px */
+scrollbar[orient="horizontal"]:hover
+{
+-moz-appearance: none !important;
+background-color: transparent !important; background-image: none !important;
+min-height: 4px !important;
+max-height: 4px !important;
+margin-top: -4px !important;
+position: relative !important;
+z-index: 2147483647 !important;
+}
+
+/* 滚动条按钮 */
+scrollbar thumb[orient="horizontal"]
+{
+-moz-appearance: none !important;
+background-color: rgba(0,100,255,.5) !important;
+border-radius: 0px !important;
+min-height: 4px !important;
+max-height: 4px !important;
+border: 1px !important; /* 滚动条按钮边框 */
+border-color: rgba(0,100,255,.75) !important;  /* 滚动条按钮边框颜色和透明度 */
+border-style: solid none none none !important; /* 水平滚动条按钮的上边框样式 */
+margin-left: 0px !important;
+}
+
+/* 鼠标悬停样式: 滚动条按钮 */
+scrollbar thumb[orient="horizontal"]:hover
+{
+background-color: rgba(0,100,255,.75) !important;
+border-radius: 0px !important;
+border: 0px !important;
+}
+
+/* 点击拖动样式：滚动条按钮 */ 
+scrollbar thumb[orient="horizontal"]:active
+{
+background-color: rgba(0,100,255,.75) !important;
+border-radius: 0px !important;
+border: 0px !important;
+}
+
+/* 去除垂直与水平滚动条相交汇的角落 */
+scrollcorner{opacity: 0 !important;}
+scrollbar scrollcorner:hover {background:transparent !important;}
+
+}

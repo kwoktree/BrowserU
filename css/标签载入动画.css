@@ -1,0 +1,12 @@
+    /* 标签载入动画  */
+    @namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
+
+    .tab-throbber[progress][busy]
+    {
+        list-style-image: url("../CSS/omni/connecting.png") !important; /*这个是connecting，以逆时针方向转*/
+    }
+
+    .tab-throbber[busy]
+    {
+        list-style-image: url("../CSS/omni/loading.png") !important; /*这个是loading，以顺时针方向转*/
+    }
