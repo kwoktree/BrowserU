@@ -3,10 +3,10 @@
 
 /*
 Name: /广告过滤
-Version: 5.2.1.74
+Version: 5.2.1.81
 Author: KwokTree
 Url: http://simpleu.googlecode.com/svn/trunk/css/AdFilter.css
-Lastchage: 23:05 2013/8/22
+Lastchage: 13:14 2013/8/27
 Description: MayBe a better User CSS Help U.
 */
 
@@ -269,7 +269,7 @@ div[class^="imh-vv "][id^="imh-"],div[id^="q_topbanner_"],div[id="spaceBrandAd"]
 display: none !important;
 	}
 div[ad-data*="ads_"],div[id$="_biztips"],div[class^="content adver_"],div[id^="pl_rightmod_ads"],
-div[class^="popular_buss"],div[id="mid_img"][style="display: block;"],div[id="btn_bot"]{
+div[class^="nba-ad"],div[class^="popular_buss"],div[id="mid_img"][style="display: block;"],div[id="btn_bot"]{
 display: none !important;
 	}
 
