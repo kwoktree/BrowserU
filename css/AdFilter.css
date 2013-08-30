@@ -3,10 +3,10 @@
 
 /*
 Name: /广告过滤
-Version: 5.2.1.81
+Version: 5.2.2.1
 Author: KwokTree
 Url: http://simpleu.googlecode.com/svn/trunk/css/AdFilter.css
-Lastchage: 13:14 2013/8/27
+Lastchage: 13:37 2013/8/30
 Description: MayBe a better User CSS Help U.
 */
 
@@ -28,7 +28,7 @@ div[class$="ad_block"],div[class*=" adspace"],div[class*="adclass"],div[class^="
 div[class^="adList"],div[class^="adlist"],div[class^="adindex"],div[class^="ades"],div[class*="-ads "]{
 display: none !important;
 	}
-div[class^="ad-txt"],div[class^="ad-img"],div[class^="ad-b"],div[class^="ad-2"],div[class="hottxt"],div[class^="ad-entry"],
+div[class^="ad-txt"],div[class^="ad-img"],div[class^="ad-b"],div[class^="ad-s"],div[class^="ad-2"],div[class="hottxt"],div[class^="ad-entry"],
 div[class="ad-widget"],div[class^="ad-text"],div[class^="adtext"],div[class="adera"],div[class="adhtml"]{
 display: none !important;
 	}
@@ -73,7 +73,7 @@ display: none !important;
 	}
 
 /* Position AD */
-div[class*="topad"],div[class^="topAD"],div[class^="topAd"],div[class$="topa_d"],div[class^="top_ad"],div[class*="ad_top"],div[class="adDingT"],
+div[class*="topad"],div[class^="topAD"],div[class^="topAd"],div[class$="topa_d"],div[class^="top_ad"],div[class^="ad_top"],div[class="adDingT"],
 div[id*="TopAD"],div[id^="TopAd"],div[id^="topAD"],div[id^="topad"],div[id*="top_ad"],div[id*="-top-ad"],div[class^="tonglan"]{
 display: none !important;
 	}
@@ -93,12 +93,12 @@ div[class^="Indexad"],div[class*="inner_ad"],div[class^="double_ad"],div[class^=
 div[class^="ATopTxt"],div[class="imgad"],div[class^="img-ad"],div[class^="other_adv"],div[class="tad"],div[class$="TxtAd"]{
 display: none !important;
 	}
-div[id$="_BOXAD"],div[id^="HeaderAd"],div[id*="_column_ad"],div[class="innerad"],div[id="push-down-ad"],a[class*="_ad_mid"],a[class*="ad_bottom"],
-div[id^="footer"],div[class^="footer-"],div[class="foot"],div[class="foot_sdvig"],div[id="particular_ad"],div[id^="duilain"]{
+div[id$="_BOXAD"],div[id^="HeaderAd"],div[id*="_column_ad"],div[class="innerad"],div[id="push-down-ad"],div[id="particular_ad"],
+div[id^="footer"],div[class^="footer-"],div[class="foot"],div[class="foot_sdvig"],div[id^="duilain"]{
 display: none !important;
 	}
-div[id="topbanner"],div[id^="BANNER_"],div[id="clickbg"],div[id="prombar"],div[id="promote-bar"],div[id="splink"],div[id="link"],div[id^="insidead"],
-div[id="baidu"],div[id^="pic_ad"],div[id^="dale_online_"],div[id^="extradiv"],div[id="sp"],div[class^="sidead"]{
+div[id="topbanner"],div[id^="BANNER_"],div[id="clickbg"],div[id="prombar"],div[id="promote-bar"],div[id="splink"],div[id="link"],
+div[id="baidu"],div[id^="pic_ad"],div[id^="dale_online_"],div[id^="extradiv"],div[id="sp"],div[id^="insidead"],div[class^="sidead"]{
 display: none !important;
 	}
 
@@ -110,8 +110,12 @@ img[id^="ad"],img[class="ad"],img[class$="adimg"],img[class$="_ad"],
 img[src$="_ad.jpg"],img[alt*="广告"],img[alt="click"],IMG[src*="/a-d-s/"]{
 display: none !important;
 	}
-aside[class="advertisement"],aside[class^="p_sider hgt"],aside[class="adArea"],a[id*="_adbox"],a[class^="ad-img-"],	
-dd[id^="AdTop"],dl[id="pop_ad"],dl[class^="tj_con"],dl[id^="ad0"],dl[class="top_ad"],dl[id="game_center"]{
+a[class*="_ad_mid"],a[class*="ad_bottom"],a[id*="_adbox"],
+a[class^="ad-img-"],a[class^="advertise"]{
+display: none !important;
+	}
+aside[class="advertisement"],aside[class^="p_sider hgt"],aside[class="adArea"],dd[id^="AdTop"],
+dl[id="pop_ad"],dl[class^="tj_con"],dl[id^="ad0"],dl[class="top_ad"],dl[id="game_center"]{
 display: none !important;
 	}
 table[class="adbottom"],table[class^="adNone"],table[id="ShowAD"],table[class="sp_block"],
@@ -140,7 +144,7 @@ div[id*="adflash"],div[id*="ad-flash"],div[id*="flash_click_"],div[id="flashbann
 div[class="flashNews"]{
 display: none !important;
 	}
-div[class*="ad-banner"],div[class="banner"]>dl,div[class^="bigbanner"][id^="bigbanner"],div[id$="_adbanner"],div[class$="_banner"],div[class="topbanner"],
+div[class*="ad-banner"],div[class="banner"]>dl,div[class^="bigbanner"][id^="bigbanner"],div[id$="_adbanner"],div[class="topbanner"],
 div[class="banner"][id^="adsp_content"],div[class="banner"][id^="banner"],div[class^="banner "],div[class^="banner6"]{
 display: none !important;
 	}
