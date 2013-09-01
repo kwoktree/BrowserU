@@ -1,0 +1,47 @@
+@namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
+
+/*========================高仿Chrome=========================*/
+/*工具栏*/
+#nav-bar {
+background-image: -moz-linear-gradient(top, #F9F9F9, #E7E7E7) !important;}
+/*非当前标签页*/
+.tabbrowser-tab > .tab-stack > .tab-content {
+-moz-border-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAbCAYAAAAdx42aAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJSSURBVEhL1ZRNaxNRGIXrxqALm4BusjAgEbuwVPEXiIigkF3oooggBRU3UtGVUNBFN1oUK1hsg9Au6sKtiIRSJWqpiLHYDvlompYm+BNmuon3mXdi4+2YSWZGoQcOmdz7nucw8CY9e1GHlI8pn1QecMwzZ9z9Ux29c2809SW/Mlla33pfrv5cxDxzxh0zMhq+Dk9MTF0uVOofV0vVxWXjT3PGHTPMSiRE9fX1nylWNrPLxd3lv63umGHWiYWm6Oyr1zeL6zX34hYzwywZiYaj5HdjbW613ds7ZoZZMhINrsiNW7cvlaveb980s2TICiKY4vO5pTGjvOVa5mZmyZAVRAAlEonThbXafNvl061myZB1ML4Vy8zMXetk+XSTIQtDUP6UzK+UZt1+914mQxaGoLpXZHj4+gX+6dwKOjFZGLAE2Z3i2YXcg26WTzdZGLAE2YV6e4+cKnj983mZZVQMWA62Y8WmMjNX/SyfbhiwYAq6MyW/5o2XfpZPNwxYMAXtrcjg0NC58kbtsxvQj2HBhC0V7RV/m/0wGmT5dMOCCVsq2igajQ4Ypc13gZZPt2LBhO3U/FWx8cfPr4SxfLphwqZDqtyVXPr240UYy6cbJmw6pGq3Dl5Mpc6WN+qf3ABhGDYddEnljvYpn3iTXQh1+XTDpoMup9PWAeXjIyN3zxcr9Vyoy6dbsemgi067O51O778/9qj/4ZPp7WeTmcb/8PjT6W066e6xTKthKluW2LRM51k+TVN92t65M+3zlox915LnTmXsrH3ezDW/O3nTavwC28gSB9ThiigAAAAASUVORK5CYII=") 2 15 fill repeat stretch !important;
+height: 27px !important;}
+/*鼠标滑过时*/
+.tabbrowser-tab:hover > .tab-stack > .tab-content:not([selected="true"]) {
+-moz-border-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAbCAYAAAAdx42aAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAOQSURBVEhL1ZW7a1RBFMajxsqoYBpDLDWooGiwEsRHIdjYBG0sRPEPiIiPQoKVtaRQo4VYCCL4gGDM01eMuSiCECGiaDa6m727ySbt7lpc53fmzN7ZGyN5WTjw5d6ZOd/jzNwkNf/jqDfYYbDXYJ+Cd9bY+2djhcHWtrarp0a/fLufzU8N5gszAeCdNfao0dplH5s6Om6fzU7ODGVyhSAdVoM19qih1lKWb6xsatp+KBtOvUwaJ0ENtXAsdXnGxoePO6+E+emKUSYBt04NtXAsdemDTnaNjf/odEdfMTZzgc5lz8yphaPcJQ0+pjWtrRdO5szHVjEX4+kgY7oV8K5BqKEWDlzVWPSgg83vP3y8xdG6Tp05a7LuQug+a3DgqsaiBslXNTY2HsxOTr2KzQ088+oQWmMABy4aqrXgQfKGBw8eXRYDZ246TZo7+FfBHC4aqrWgId0b7P429vNJ5XgTR59E1VWYJ1w0VGtBp0DiutNnzpzgL91c3ecKFv6aBNBTgIsGWqo5r+G63zI8/O6GiLoAnhHgawf+mv8tMEcDLdWc1ymQtHb9+voD/FUTcwlgxZ2R7d4G8E+h6hoM0EALTdX+6yAhRQ137t67FBrh+Hc/NrEB7D8iMOsUNABcNNBCU7XnPAVnzlE1f/76/aETsSGcgT3aMB8H4N3fozbmFQK00FTtOUOwSMHalpZjx3PTM8NOxAmF5m4FGiCnqATQfT84QAtNtNVjVgC/+6ZXg0E7d5kO8woryscVBzDXoHBzMa8KYPlooYm2esw6BRegtq6ubn8mzD1PZwwZJAJICN/Ug9uvCqA6aKKNh3pVAvjdN7Rfv3mOTsb/GuBPIeL9ZAC00EQbD/WqhPADNH8a/XIfYnUAOrDCEkBCJAJ45jaAcjUA72jjoV6VAM58w+EjR1om8jNvU5lckPKI4yIWB5gVwpkDMTcnqAHQQAtNtPHASz3xlh+rDfYMvHh9DVIqEwaptAmR1g4QM08n7rr0Tf09n4OGaBlNtPHASz0lwDqDnecvXj47kZ0cSqXDYMzABohPovpKYlPfXPa8eulcdaxmGOCBF57i/WFkZNvLN8NHO7t6fj3t7oss+qOunv7oWc+ARe9A1A36wPOop++FoFfh5uxJjamF4/hooen08cIT75pyqRwVi+WoVCoJiqWivttnsWiegnivKOt2LpB3j2/mcIQr647n5vDLUblUjn4DpolvX1FVTiIAAAAASUVORK5CYII=") 2 15 fill repeat stretch !important;}
+/*当前标签页*/
+.tabbrowser-tab > .tab-stack > .tab-content[selected="true"] {
+-moz-border-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAbCAYAAAAdx42aAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAKXSURBVEhLzZZPqxJhFIftf1Y3o4IiocWNCC4uIqKWESHlsrwfwWW0kGzhNhDa1CoIvDv9Am4K3LQXN2ELt4ErV4Kmd3xHp/MM5x2m0a6ZDnTgB+PMOb/nvOedcSbxv8cx1XHVSdF10X3RE9EzFcec4xo5Nt/W/1NE4WdEdyuVyut+v//tUMLT4JhzXCNHczdqIgw/ITotul2r1d45juMqdyG4Rg65WkPt2k1E4Yz0XCaTea6clUEuNVq7dhMkW7hd/W6z2TxQ/5VBLjVaa32s75Fhk2wDp0Ss5NFgMPih/iuDXGq0Fo9wA2hp2LGH4WdF14rF4htjzFz9Vwa51FCrHtEmFrYiDEfsHeNjBfe63e7X6XT61w2QSw216oFX+PFEQRMc/Gn1l9Lp9L76rh3U4qFey6bgNxGFh1d/p9FofFK/tYNaPNTLTmFhK6INkEjHF0WPmfsmwkO98MT7yAYYE0nnRTcKhUJxmek6wgMv9cQbxm8N2B929HS6I3rQ6XSas/nc20R44KWedgrhG3KhAfbrSiqVejGfzbxtCC881XtpAxaeFF0Q7dXr9Y8zKd6G8MJTvWGEmwjufN5gdJgSZZcZbSI81RsGLJiwgzufk+zTzXw+/8p1Z942hSfeyoAF028guvqH7Xb7s2uMt03hibcywlPwHwt+8JhcTSaT+8Z1vTiENwxlwYQdrJ4/i71qtfrBTI0Xh/CGoSw7haCBy6Jsr9f7Li8TXihbF94wlBU0YFe/m8vlXjpTx4tTMGApE7b/bPInkW21Wl+mjuPFKRiwlAk7cUv0tFwuvx+Px0Y+LPm4jE0wYMH02aVSaWc4HL4djUbuaPRzztd2nIIBCybshHw++Z1NJmPRRHQYs2CMfaYxxvsFbsI5ZvJEmjQAAAAASUVORK5CYII=") 2 15 fill repeat stretch !important;}
+/*去除默认边距背景*/
+.tabbrowser-tab {
+-moz-appearance: none !important;
+margin-bottom: -1px !important;
+padding: 0 !important;
+border: none !important;
+background: transparent !important;}
+/*标签页交叉*/
+.tab-content {
+border: solid transparent !important;
+border-width: 2px 15px !important;
+-moz-margin-start: 0 !important;
+-moz-margin-end: -13px !important;}
+.tabbrowser-tab[selected="true"] > .tab-stack {
+z-index: 1!important;
+position: relative!important;}
+/*新建标签页按钮*/
+.tabs-newtab-button {
+-moz-appearance: none!important;
+border: 0 !important;
+padding: 0 !important;
+background: transparent!important;
+list-style-image: url("data:image/png;base64,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")!important;
+-moz-image-region: rect(0px, 30px, 18px, 0px)!important;
+margin-top: 2px !important;
+margin-left: 8px !important;}
+.tabs-newtab-button:hover {
+-moz-image-region: rect(0px, 60px, 18px, 30px)!important;}
+.tabs-newtab-button:hover:active {
+-moz-image-region: rect(0px, 90px, 18px, 60px)!important;}
+/*========================高仿Chrome结束=========================*/

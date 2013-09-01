@@ -4,8 +4,6 @@
 
    }
 
-
-
 #PersonalToolbar:not([collapsed="true"]) {
 
     visibility: collapse !important;
@@ -15,8 +13,6 @@
     -moz-transition: visibility 0s, opacity 0s ease !important;
 
    }
-
-
 
 #navigator-toolbox:hover #PersonalToolbar:not([collapsed="true"]) {
 
