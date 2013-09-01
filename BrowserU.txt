@@ -1,5 +1,5 @@
 @echo off
-set ver=1.0.3.3D
+set ver=1.0.3.5F
 SetLocal EnableExtensions
 SetLocal EnableDelayedExpansion
 set k=taskkill /f /t /im
@@ -33,7 +33,7 @@ echo do until oDOM.readyState = "complete" >>%temp%/chkver.vbs
 echo WScript.sleep 50 >>%temp%/chkver.vbs
 echo loop >>%temp%/chkver.vbs
 echo WScript.echo oDOM.documentElement.outerText >>%temp%/chkver.vbs
-cscript //NoLogo /e:vbscript %temp%/chkver.vbs "http://simpleu.googlecode.com/svn/trunk/Firver.txt">%temp%/ver.txt 2>nul
+cscript //NoLogo /e:vbscript %temp%/chkver.vbs "https://raw.github.com/kwoktree/BrowserU/master/BrowserU.txt">%temp%/ver.txt 2>nul
 for /f %%i in (%temp%\ver.txt) do set verNew=%%i
 if %ver%==%verNew% (goto start) else (echo Download the lastest version! & choice /t 2 /d y /n >nul & goto Updates)
 cls
@@ -47,7 +47,7 @@ goto:eof
 if not exist %ff% call :update &exit
 rd browser\searchplugins /s /q >nul 2>nul
 Tasklist|Find /i "plugin-container.exe">nul &&(%k% plugin-container.exe)
-start %ff% -profile profile
+start %ff% -profile profile --no-remote
 goto:eof
 
 :backup
@@ -162,22 +162,25 @@ wget -c -N http://haoutil.googlecode.com/svn/trunk/player/testmod/olc_8.swf -P p
 wget -c -N http://haoutil.googlecode.com/svn/trunk/player/testmod/player.swf -P profile\chrome\swf
 wget -c -N http://haoutil.googlecode.com/svn/trunk/player/testmod/sp.swf -P profile\chrome\swf
 wget -c -N http://haoutil.googlecode.com/svn/trunk/player/tudou.swf -P profile\chrome\swf
-wget -N http://simpleu.googlecode.com/svn/trunk/Firefox/iProxy.pac
-wget -N -P profile http://simpleu.googlecode.com/svn/trunk/Firefox/permissions.sqlite
-wget -N -P profile http://simpleu.googlecode.com/svn/trunk/Firefox/prefs.js
-wget -N -P profile http://simpleu.googlecode.com/svn/trunk/Firefox/user.js
-wget -N -P profile http://simpleu.googlecode.com/svn/trunk/Firefox/search-metadata.json
-wget -N -P profile\chrome http://simpleu.googlecode.com/svn/trunk/Opera/urlfilter.ini
-wget -N -P profile\chrome http://simpleu.googlecode.com/svn/trunk/Firefox/userChrome.css
-wget -N http://simpleu.googlecode.com/svn/trunk/Firefox/readme.txt
-wget -N -P profile\chrome\CSS http://simpleu.googlecode.com/svn/trunk/css/AdFilter.css
-wget -N -P profile\chrome\CSS http://simpleu.googlecode.com/svn/trunk/css/BBS.css
-wget -N -P profile\chrome\CSS http://simpleu.googlecode.com/svn/trunk/css/YaHei.css
+%n% https://raw.github.com/kwoktree/BrowserU/master/pac/iProxy.pac
+%n% -P profile https://raw.github.com/kwoktree/FireFoxU/master/permissions.sqlite
+%n% -P profile https://raw.github.com/kwoktree/FireFoxU/master/user.js
+%n% -P profile https://raw.github.com/kwoktree/FireFoxU/master/search-metadata.json
+%n% -P profile\chrome https://raw.github.com/kwoktree/OperaU/master/urlfilter.ini
+%n% -P profile\chrome https://raw.github.com/kwoktree/FireFoxU/master/userChrome.css
+%n% https://raw.github.com/kwoktree/FireFoxU/master/readme.txt
+%n% -P profile\chrome\CSS https://raw.github.com/kwoktree/BrowserU/master/css/AdFilter.css
+%n% -P profile\chrome\CSS https://raw.github.com/kwoktree/BrowserU/master/css/BBS.css
+%n% -P profile\chrome\CSS https://raw.github.com/kwoktree/BrowserU/master/css/YaHei.css
+%n% -O profile\chrome\userMenu\EasyDrag.uc.js https://raw.github.com/kwoktree/FireFoxU/master/EasyDrag.uc.js
+%n% -O profile\chrome\userMenu\MouseGestures2.uc.js https://raw.github.com/kwoktree/FireFoxU/master/MouseGestures2.uc.js
 %n% https://raw.github.com/lastdream2013/userChrome/master/countryflags.js
 move /y countryflags.js profile\chrome\lib
 %n% -P profile\chrome https://raw.github.com/alice0775/userChrome.js/master/000-windowhook.uc.js
 %n% -P profile\chrome https://raw.github.com/lastdream2013/userChrome/master/UserScriptLoader.uc.js
 %n% -P profile\chrome https://raw.github.com/ywzhaiqi/userChromeJS/master/uAutoPagerize/_uAutoPagerize.js
+%n% -P profile\chrome https://raw.github.com/ywzhaiqi/userChromeJS/master/AddonsPage/AddonsPage.uc.js
+%n% -P profile\chrome https://raw.github.com/ywzhaiqi/userChromeJS/master/userChrome.js
 %n% -O YoukuAntiADs.uc.jsx https://j.mozest.com/zh-CN/ucscript/script/92.uc.js
 move /y YoukuAntiADs.uc.jsx profile\chrome
 %n% -O TabMixPlus\ColorfulTab.uc.jsx https://raw.github.com/ardiman/userChrome.js/master/colorfultab/ColorfulTab.uc.js
@@ -210,9 +213,7 @@ wget -c -N -O profile\chrome\TabMixPlus\locationbar.uc.js http://files.cnblogs.c
 wget -c -N -O profile\chrome\TabMixPlus\singletonFox.uc.js http://www.quchao.com/projects/mozilla/firefox/userchrome_js/singletonFox.uc.js
 wget -c -N -O profile\chrome\TabMixPlus\undoCloseTabButtonMod.uc.js http://j.mozest.com/zh-CN/ucscript/script/71.uc.js
 wget -c -N -O profile\chrome\userMenu\CopyGIF.uc.js http://files.cnblogs.com/ziyunfei/CopyGIF.uc.js
-wget -c -N -O profile\chrome\userMenu\EasyDrag.uc.js http://simpleu.googlecode.com/svn/trunk/Firefox/EasyDrag.uc.js
 wget -c -N -O profile\chrome\userMenu\ExtendedCopyMenu.uc.js http://files.cnblogs.com/ziyunfei/ExtendedCopyMenu.uc.js
-wget -c -N -O profile\chrome\userMenu\MouseGestures2.uc.js http://simpleu.googlecode.com/svn/trunk/Firefox/MouseGestures2.uc.js
 wget -c -N -O profile\chrome\xul\NextPage.uc.xul http://j.mozest.com/zh-CN/ucscript/script/5.uc.xul
 %d%163NewsComments.user.js http://userscripts.org/scripts/source/156627.user.js
 %d%AdSkipper.user.js http://userscripts.org/scripts/source/118033.user.js
@@ -232,7 +233,7 @@ wget -c -N -O profile\chrome\xul\NextPage.uc.xul http://j.mozest.com/zh-CN/ucscr
 %d%goglrd.user.js http://userscripts.org/scripts/source/154702.user.js
 %d%http2https.user.js http://userscripts.org/scripts/source/154476.user.js
 %d%nolazyload.user.js http://userscripts.org/scripts/source/151249.user.js
-%d%picViewer.user.jsx http://userscripts.org/scripts/source/105741.user.js
+%d%picViewer.user.js http://userscripts.org/scripts/source/105741.user.js
 %d%shooter.user.js http://userscripts.org/scripts/source/167084.user.js
 %d%tiebaAllsign.user.js http://userscripts.org/scripts/source/141939.user.js
 %d%xiaonei_reformer.min.user.js http://userscripts.org/scripts/source/45836.user.js
@@ -395,9 +396,9 @@ echo do until oDOM.readyState = "complete" >>%temp%/Upnew.vbs
 echo WScript.sleep 200 >>%temp%/Upnew.vbs
 echo loop >>%temp%/Upnew.vbs
 echo WScript.echo oDOM.documentElement.outerText >>%temp%/Upnew.vbs
-cscript //NoLogo /e:vbscript %temp%/Upnew.vbs "http://simpleu.googlecode.com/svn/trunk/Opera/BrowserU.txt">%temp%\BrowserU.bat
+cscript //NoLogo /e:vbscript %temp%/Upnew.vbs "https://raw.github.com/kwoktree/BrowserU/master/BrowserU.txt">%temp%\BrowserU.bat
 set size=7000
 for %%1 in (BrowserU.bat)do set gsize=%%~z1
 cls
-if %gsize% gtr %size% (echo 网络获取失败，正在努力获取&wget http://simpleu.googlecode.com/svn/trunk/Opera/BrowserU.txt -o %temp% &ren OperaU.Src BrowserU.bat&goto Updateit) else (goto Updateit)
+if %gsize% gtr %size% (echo 网络获取失败，正在努力获取&wget https://raw.github.com/kwoktree/BrowserU/master/BrowserU.txt -o %temp% &ren BrowserU.txt BrowserU.bat&goto Updateit) else (goto Updateit)
 goto:eof
