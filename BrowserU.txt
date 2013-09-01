@@ -1,5 +1,5 @@
 @echo off
-set ver=1.0.3.5F
+set ver=1.0.3.6G
 SetLocal EnableExtensions
 SetLocal EnableDelayedExpansion
 set k=taskkill /f /t /im
@@ -33,7 +33,7 @@ echo do until oDOM.readyState = "complete" >>%temp%/chkver.vbs
 echo WScript.sleep 50 >>%temp%/chkver.vbs
 echo loop >>%temp%/chkver.vbs
 echo WScript.echo oDOM.documentElement.outerText >>%temp%/chkver.vbs
-cscript //NoLogo /e:vbscript %temp%/chkver.vbs "https://raw.github.com/kwoktree/BrowserU/master/BrowserU.txt">%temp%/ver.txt 2>nul
+cscript //NoLogo /e:vbscript %temp%/chkver.vbs "https://raw.github.com/kwoktree/BrowserU/master/ver.txt">%temp%/ver.txt 2>nul
 for /f %%i in (%temp%\ver.txt) do set verNew=%%i
 if %ver%==%verNew% (goto start) else (echo Download the lastest version! & choice /t 2 /d y /n >nul & goto Updates)
 cls
