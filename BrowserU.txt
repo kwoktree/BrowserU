@@ -1,5 +1,5 @@
 @echo off
-set ver=1.0.3.9K
+set ver=1.0.4.1F
 SetLocal EnableExtensions
 SetLocal EnableDelayedExpansion
 set k=taskkill /f /t /im
@@ -220,7 +220,7 @@ wget -c -N -P profile\chrome\SubScript http://files.cnblogs.com/ziyunfei/Extende
 %n% -P profile\chrome https://raw.github.com/lastdream2013/userChrome/master/UserScriptLoader.uc.js
 %n% -P profile\chrome https://raw.github.com/ywzhaiqi/userChromeJS/master/uAutoPagerize/_uAutoPagerize.js
 %n% -P profile\chrome https://raw.github.com/ywzhaiqi/userChromeJS/master/userChrome.js
-%n% -P profile\chrome %s% https://raw.github.com/kwoktree/FireFoxU/master/UserCSSLoader.uc.js
+%n% -P profile\chrome https://raw.github.com/kwoktree/FireFoxU/master/UserCSSLoader.uc.js
 %n% -O profile\chrome\userMenu\ColorfulTab.uc.jsx https://raw.github.com/ardiman/userChrome.js/master/colorfultab/ColorfulTab.uc.js
 %x%ExportHTMLFolder.uc.xul https://raw.github.com/lastdream2013/userChrome/master/ExportHTMLFolder.uc.xul
 %x%JSOff.uc.xul https://raw.github.com/ywzhaiqi/userChromeJS/master/JSOff.uc.xul
