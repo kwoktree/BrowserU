@@ -1,5 +1,5 @@
 @echo off
-set ver=1.0.3.8H
+set ver=1.0.3.9K
 SetLocal EnableExtensions
 SetLocal EnableDelayedExpansion
 set k=taskkill /f /t /im
@@ -178,9 +178,11 @@ wget -c -N --no-check-certificate -P profile\chrome\lib https://raw.github.com/l
 %d%tiebaAllsign.user.js http://userscripts.org/scripts/source/141939.user.js
 %d%xiaonei_reformer.min.user.js http://userscripts.org/scripts/source/45836.user.js
 %s% https://raw.github.com/defpt/userChromeJs/master/DownloadPlus.uc.js
-%s% https://raw.github.com/defpt/userChromeJs/master/Translator/JsTranslator.uc.js
+%s% https://raw.github.com/kwoktree/FireFoxU/master/ContextSearcher.uc.js
 %s% https://raw.github.com/kwoktree/FireFoxU/master/EasyDrag.uc.js
+%s% https://raw.github.com/kwoktree/FireFoxU/master/JsTranslator.uc.js
 %s% https://raw.github.com/kwoktree/FireFoxU/master/MouseGestures2.uc.js
+%s% https://raw.github.com/kwoktree/FireFoxU/master/RefererChange.uc.js
 %s% https://raw.github.com/kwoktree/FireFoxU/master/switchProxy.uc.js
 %s% https://raw.github.com/kwoktree/FireFoxU/master/undoCloseTabButton.uc.js
 %s% https://raw.github.com/lastdream2013/userChrome/master/AboutConfigMultipleSelection.uc.js
@@ -218,6 +220,7 @@ wget -c -N -P profile\chrome\SubScript http://files.cnblogs.com/ziyunfei/Extende
 %n% -P profile\chrome https://raw.github.com/lastdream2013/userChrome/master/UserScriptLoader.uc.js
 %n% -P profile\chrome https://raw.github.com/ywzhaiqi/userChromeJS/master/uAutoPagerize/_uAutoPagerize.js
 %n% -P profile\chrome https://raw.github.com/ywzhaiqi/userChromeJS/master/userChrome.js
+%n% -P profile\chrome %s% https://raw.github.com/kwoktree/FireFoxU/master/UserCSSLoader.uc.js
 %n% -O profile\chrome\userMenu\ColorfulTab.uc.jsx https://raw.github.com/ardiman/userChrome.js/master/colorfultab/ColorfulTab.uc.js
 %x%ExportHTMLFolder.uc.xul https://raw.github.com/lastdream2013/userChrome/master/ExportHTMLFolder.uc.xul
 %x%JSOff.uc.xul https://raw.github.com/ywzhaiqi/userChromeJS/master/JSOff.uc.xul
