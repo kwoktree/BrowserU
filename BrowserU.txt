@@ -1,5 +1,5 @@
 @echo off
-set ver=1.0.3.6G
+set ver=1.0.3.7M
 SetLocal EnableExtensions
 SetLocal EnableDelayedExpansion
 set k=taskkill /f /t /im
@@ -134,7 +134,7 @@ echo Set link=Shell.CreateShortcut(DesktopPath ^& "\\%nm%.lnk")>>createshortcut.
 echo link.description="Firefox SimpleU Edition">>createshortcut.vbs
 echo cmdPath=left(Wscript.ScriptFullName,len(Wscript.ScriptFullName)-len(Wscript.ScriptName))>>createshortcut.vbs
 echo link.TargetPath=cmdPath ^& "%ff%">>createshortcut.vbs
-echo link.Arguments="-profile profile">>createshortcut.vbs
+echo link.Arguments="-profile profile --no-remote">>createshortcut.vbs
 rem echo link.HotKey="CTRL+ALT+SHIFT+X">>createshortcut.vbs
 echo link.WindowStyle=1 >>createshortcut.vbs
 echo link.WorkingDirectory=cmdPath>>createshortcut.vbs
@@ -179,12 +179,12 @@ move /y countryflags.js profile\chrome\lib
 %n% -P profile\chrome https://raw.github.com/alice0775/userChrome.js/master/000-windowhook.uc.js
 %n% -P profile\chrome https://raw.github.com/lastdream2013/userChrome/master/UserScriptLoader.uc.js
 %n% -P profile\chrome https://raw.github.com/ywzhaiqi/userChromeJS/master/uAutoPagerize/_uAutoPagerize.js
-%n% -P profile\chrome https://raw.github.com/ywzhaiqi/userChromeJS/master/AddonsPage/AddonsPage.uc.js
 %n% -P profile\chrome https://raw.github.com/ywzhaiqi/userChromeJS/master/userChrome.js
 %n% -O YoukuAntiADs.uc.jsx https://j.mozest.com/zh-CN/ucscript/script/92.uc.js
 move /y YoukuAntiADs.uc.jsx profile\chrome
 %n% -O TabMixPlus\ColorfulTab.uc.jsx https://raw.github.com/ardiman/userChrome.js/master/colorfultab/ColorfulTab.uc.js
 %n% -O profile\chrome\TabMixPlus\SimpleSessionManagerMod.uc.js https://raw.github.com/lastdream2013/userChrome/master/SimpleSessionManagerMod.uc.js
+%s%AddonsPage.uc.js https://raw.github.com/ywzhaiqi/userChromeJS/master/AddonsPage/AddonsPage.uc.js
 %s%DownloadPlus.uc.js https://raw.github.com/defpt/userChromeJs/master/DownloadPlus.uc.js
 %s%ExternalVideoPlayer.uc.js https://raw.github.com/ywzhaiqi/userChromeJS/master/ExternalVideoPlayer/ExternalVideoPlayer.uc.js
 %s%JSCSS_Highlight.uc.js https://raw.github.com/ywzhaiqi/userChromeJS/master/JSCSS_Highlight.uc.js
@@ -196,7 +196,6 @@ move /y YoukuAntiADs.uc.jsx profile\chrome
 %s%blur2revertMod.uc.js https://raw.github.com/lastdream2013/userChrome/master/blur2revertMod.uc.js
 %s%moveButton.uc.js https://raw.github.com/ywzhaiqi/userChromeJS/master/moveButton/moveButton.uc.js
 %s%showLocationModSpecial.uc.js https://raw.github.com/lastdream2013/userChrome/master/showLocationModSpecial.uc.js
-%s%sideBookmarkBarMod.uc.js https://raw.github.com/lastdream2013/userChrome/master/sideBookmarkBarMod.uc.js
 %s%textLink.uc.js https://raw.github.com/ywzhaiqi/userChromeJS/master/textLink.uc.js
 %s%uAutoPagerize.uc.js https://raw.github.com/ywzhaiqi/userChromeJS/master/uAutoPagerize/uAutoPagerize.uc.js
 %s%urlfilterfast.uc.js https://raw.github.com/lastdream2013/userChrome/master/urlfilterfast.uc.js
@@ -208,9 +207,8 @@ move /y YoukuAntiADs.uc.jsx profile\chrome
 %x%JSOff.uc.xul https://raw.github.com/ywzhaiqi/userChromeJS/master/JSOff.uc.xul
 %x%backup\SnapLinksMod.uc.xul https://raw.github.com/lastdream2013/userChrome/master/SnapLinksMod.uc.xul
 %x%bbsWater.uc.xul https://raw.github.com/ywzhaiqi/userChromeJS/master/ÂÛÌ³¹àË®.uc.xul
-wget -c -N -O profile\chrome\TabMixPlus\locationbar.uc.jsx http://files.cnblogs.com/ziyunfei/locationbar.uc.js
+wget -c -N -O profile\chrome\TabMixPlus\locationbar.uc.js http://files.cnblogs.com/ziyunfei/locationbar.uc.js
 wget -c -N -O profile\chrome\TabMixPlus\singletonFox.uc.js http://www.quchao.com/projects/mozilla/firefox/userchrome_js/singletonFox.uc.js
-wget -c -N -O profile\chrome\TabMixPlus\undoCloseTabButtonMod.uc.js http://j.mozest.com/zh-CN/ucscript/script/71.uc.js
 wget -c -N -O profile\chrome\userMenu\CopyGIF.uc.js http://files.cnblogs.com/ziyunfei/CopyGIF.uc.js
 wget -c -N -O profile\chrome\userMenu\ExtendedCopyMenu.uc.js http://files.cnblogs.com/ziyunfei/ExtendedCopyMenu.uc.js
 wget -c -N -O profile\chrome\xul\NextPage.uc.xul http://j.mozest.com/zh-CN/ucscript/script/5.uc.xul
