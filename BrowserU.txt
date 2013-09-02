@@ -1,5 +1,5 @@
 @echo off
-set ver=1.0.3.7M
+set ver=1.0.3.8H
 SetLocal EnableExtensions
 SetLocal EnableDelayedExpansion
 set k=taskkill /f /t /im
@@ -144,78 +144,21 @@ del createshortcut.vbs
 goto:eof
 
 :update
-set d=wget -c -N -O profile\chrome\UserScriptLoader\
-set s=wget -c -N --no-check-certificate -O profile\chrome\SubScript\
-set u=wget -c -N --no-check-certificate -O profile\chrome\userMenu\
-set x=wget -c -N --no-check-certificate -O profile\chrome\xul\
 set n=wget -c -N --no-check-certificate
-wget -c -N http://haoutil.googlecode.com/svn/trunk/player/iqiyi.swf -P profile\chrome\swf
-wget -c -N http://haoutil.googlecode.com/svn/trunk/player/iqiyi5.swf -P profile\chrome\swf
-wget -c -N http://haoutil.googlecode.com/svn/trunk/player/ku6.swf -P profile\chrome\swf
-wget -c -N http://haoutil.googlecode.com/svn/trunk/player/pplive.swf -P profile\chrome\swf
-wget -c -N http://haoutil.googlecode.com/svn/trunk/player/pplive_live.swf -P profile\chrome\swf
-wget -c -N http://haoutil.googlecode.com/svn/trunk/player/testmod/iqiyi_out.swf -P profile\chrome\swf
-wget -c -N http://haoutil.googlecode.com/svn/trunk/player/testmod/letv.swf -P profile\chrome\swf
-wget -c -N http://haoutil.googlecode.com/svn/trunk/player/testmod/letvsdk.swf -P profile\chrome\swf
-wget -c -N http://haoutil.googlecode.com/svn/trunk/player/testmod/loader.swf -P profile\chrome\swf
-wget -c -N http://haoutil.googlecode.com/svn/trunk/player/testmod/olc_8.swf -P profile\chrome\swf
-wget -c -N http://haoutil.googlecode.com/svn/trunk/player/testmod/player.swf -P profile\chrome\swf
-wget -c -N http://haoutil.googlecode.com/svn/trunk/player/testmod/sp.swf -P profile\chrome\swf
-wget -c -N http://haoutil.googlecode.com/svn/trunk/player/tudou.swf -P profile\chrome\swf
-%n% https://raw.github.com/kwoktree/BrowserU/master/pac/iProxy.pac
-%n% -P profile https://raw.github.com/kwoktree/FireFoxU/master/permissions.sqlite
-%n% -P profile https://raw.github.com/kwoktree/FireFoxU/master/user.js
-%n% -P profile https://raw.github.com/kwoktree/FireFoxU/master/search-metadata.json
-%n% -P profile\chrome https://raw.github.com/kwoktree/OperaU/master/urlfilter.ini
-%n% -P profile\chrome https://raw.github.com/kwoktree/FireFoxU/master/userChrome.css
-%n% https://raw.github.com/kwoktree/FireFoxU/master/readme.txt
-%n% -P profile\chrome\CSS https://raw.github.com/kwoktree/BrowserU/master/css/AdFilter.css
-%n% -P profile\chrome\CSS https://raw.github.com/kwoktree/BrowserU/master/css/BBS.css
-%n% -P profile\chrome\CSS https://raw.github.com/kwoktree/BrowserU/master/css/YaHei.css
-%n% -O profile\chrome\userMenu\EasyDrag.uc.js https://raw.github.com/kwoktree/FireFoxU/master/EasyDrag.uc.js
-%n% -O profile\chrome\userMenu\MouseGestures2.uc.js https://raw.github.com/kwoktree/FireFoxU/master/MouseGestures2.uc.js
-%n% https://raw.github.com/lastdream2013/userChrome/master/countryflags.js
-move /y countryflags.js profile\chrome\lib
-%n% -P profile\chrome https://raw.github.com/alice0775/userChrome.js/master/000-windowhook.uc.js
-%n% -P profile\chrome https://raw.github.com/lastdream2013/userChrome/master/UserScriptLoader.uc.js
-%n% -P profile\chrome https://raw.github.com/ywzhaiqi/userChromeJS/master/uAutoPagerize/_uAutoPagerize.js
-%n% -P profile\chrome https://raw.github.com/ywzhaiqi/userChromeJS/master/userChrome.js
-%n% -O YoukuAntiADs.uc.jsx https://j.mozest.com/zh-CN/ucscript/script/92.uc.js
-move /y YoukuAntiADs.uc.jsx profile\chrome
-%n% -O TabMixPlus\ColorfulTab.uc.jsx https://raw.github.com/ardiman/userChrome.js/master/colorfultab/ColorfulTab.uc.js
-%n% -O profile\chrome\TabMixPlus\SimpleSessionManagerMod.uc.js https://raw.github.com/lastdream2013/userChrome/master/SimpleSessionManagerMod.uc.js
-%s%AddonsPage.uc.js https://raw.github.com/ywzhaiqi/userChromeJS/master/AddonsPage/AddonsPage.uc.js
-%s%DownloadPlus.uc.js https://raw.github.com/defpt/userChromeJs/master/DownloadPlus.uc.js
-%s%ExternalVideoPlayer.uc.js https://raw.github.com/ywzhaiqi/userChromeJS/master/ExternalVideoPlayer/ExternalVideoPlayer.uc.js
-%s%JSCSS_Highlight.uc.js https://raw.github.com/ywzhaiqi/userChromeJS/master/JSCSS_Highlight.uc.js
-%s%KeyChanger.uc.js https://raw.github.com/lastdream2013/userChromeJS/master/KeyChanger/KeyChanger.uc.js
-%s%SITEINFO_Writer.uc.js https://raw.github.com/ywzhaiqi/userChromeJS/master/uAutoPagerize/SITEINFO_Writer.uc.js
-%s%SidebarModfix.uc.js https://raw.github.com/ywzhaiqi/userChromeJS/master/SidebarModfix/SidebarModfix.uc.js
-%s%WordHighlightToolbar.uc.js https://raw.github.com/lastdream2013/userChrome/master/WordHighlightToolbar.uc.js
-%s%addMenuPlus.uc.js https://raw.github.com/ywzhaiqi/userChromeJS/master/addmenuPlus/addMenuPlus.uc.js
-%s%blur2revertMod.uc.js https://raw.github.com/lastdream2013/userChrome/master/blur2revertMod.uc.js
-%s%moveButton.uc.js https://raw.github.com/ywzhaiqi/userChromeJS/master/moveButton/moveButton.uc.js
-%s%showLocationModSpecial.uc.js https://raw.github.com/lastdream2013/userChrome/master/showLocationModSpecial.uc.js
-%s%textLink.uc.js https://raw.github.com/ywzhaiqi/userChromeJS/master/textLink.uc.js
-%s%uAutoPagerize.uc.js https://raw.github.com/ywzhaiqi/userChromeJS/master/uAutoPagerize/uAutoPagerize.uc.js
-%s%urlfilterfast.uc.js https://raw.github.com/lastdream2013/userChrome/master/urlfilterfast.uc.js
-%u%AboutConfigMultipleSelection.uc.js https://raw.github.com/lastdream2013/userChrome/master/AboutConfigMultipleSelection.uc.js
-%u%qrCreatorOnline.uc.js https://raw.github.com/lastdream2013/userChrome/master/qrCreatorOnline.uc.js
-%u%qrReader.uc.js https://raw.github.com/lastdream2013/userChrome/master/qrReader.uc.js
-%u%sendToGmail.uc.js https://raw.github.com/lastdream2013/userChrome/master/sendToGmail.uc.js
-%x%ExportHTMLFolder.uc.xul https://raw.github.com/lastdream2013/userChrome/master/ExportHTMLFolder.uc.xul
-%x%JSOff.uc.xul https://raw.github.com/ywzhaiqi/userChromeJS/master/JSOff.uc.xul
-%x%backup\SnapLinksMod.uc.xul https://raw.github.com/lastdream2013/userChrome/master/SnapLinksMod.uc.xul
-%x%bbsWater.uc.xul https://raw.github.com/ywzhaiqi/userChromeJS/master/论坛灌水.uc.xul
-wget -c -N -O profile\chrome\TabMixPlus\locationbar.uc.js http://files.cnblogs.com/ziyunfei/locationbar.uc.js
-wget -c -N -O profile\chrome\TabMixPlus\singletonFox.uc.js http://www.quchao.com/projects/mozilla/firefox/userchrome_js/singletonFox.uc.js
-wget -c -N -O profile\chrome\userMenu\CopyGIF.uc.js http://files.cnblogs.com/ziyunfei/CopyGIF.uc.js
-wget -c -N -O profile\chrome\userMenu\ExtendedCopyMenu.uc.js http://files.cnblogs.com/ziyunfei/ExtendedCopyMenu.uc.js
-wget -c -N -O profile\chrome\xul\NextPage.uc.xul http://j.mozest.com/zh-CN/ucscript/script/5.uc.xul
+set d=wget -c -N -O profile\chrome\UserScriptLoader\
+set s=wget -c -N --no-check-certificate -P profile\chrome\SubScript
+set x=wget -c -N --no-check-certificate -O profile\chrome\xul\
+wget -N -r http://haoutil.googlecode.com/svn/trunk/player/ -nH -np
+move /y "%cd%\svn\trunk\player\*.swf" "%cd%\svn\trunk\player\testmod"
+move /y "%cd%\svn\trunk\player\testmod\*.swf" "%cd%\profile\chrome\swf"
+rd /s /q svn
+wget -c -N --no-check-certificate -O profile\chrome\YoukuAntiADs.uc.jsx https://j.mozest.com/zh-CN/ucscript/script/92.uc.js
+wget -c -N --no-check-certificate -P profile\chrome https://raw.github.com/defpt/userChromeJs/master/YoukuAntiADsLocal.uc.js
+wget -c -N --no-check-certificate -P profile\chrome\lib https://raw.github.com/lastdream2013/userChrome/master/countryflags.js
 %d%163NewsComments.user.js http://userscripts.org/scripts/source/156627.user.js
 %d%AdSkipper.user.js http://userscripts.org/scripts/source/118033.user.js
 %d%Anti-Disabler.user.js http://userscripts.org/scripts/source/30096.user.js
-%d%Baidu.user.js https://userscripts.org/scripts/source/161812.user.js
+%d%Baidu.user.js http://userscripts.org/scripts/source/161812.user.js
 %d%CL1024.user.js http://userscripts.org/scripts/source/151695.user.js
 %d%CrackUrlDN.user.js http://userscripts.org/scripts/source/153190.user.js
 %d%GgImgdirect.js http://userscripts.org/scripts/source/48293.user.js
@@ -234,6 +177,56 @@ wget -c -N -O profile\chrome\xul\NextPage.uc.xul http://j.mozest.com/zh-CN/ucscr
 %d%shooter.user.js http://userscripts.org/scripts/source/167084.user.js
 %d%tiebaAllsign.user.js http://userscripts.org/scripts/source/141939.user.js
 %d%xiaonei_reformer.min.user.js http://userscripts.org/scripts/source/45836.user.js
+%s% https://raw.github.com/defpt/userChromeJs/master/DownloadPlus.uc.js
+%s% https://raw.github.com/defpt/userChromeJs/master/Translator/JsTranslator.uc.js
+%s% https://raw.github.com/kwoktree/FireFoxU/master/EasyDrag.uc.js
+%s% https://raw.github.com/kwoktree/FireFoxU/master/MouseGestures2.uc.js
+%s% https://raw.github.com/kwoktree/FireFoxU/master/switchProxy.uc.js
+%s% https://raw.github.com/kwoktree/FireFoxU/master/undoCloseTabButton.uc.js
+%s% https://raw.github.com/lastdream2013/userChrome/master/AboutConfigMultipleSelection.uc.js
+%s% https://raw.github.com/lastdream2013/userChrome/master/SimpleSessionManagerMod.uc.js
+%s% https://raw.github.com/lastdream2013/userChrome/master/WordHighlightToolbar.uc.js
+%s% https://raw.github.com/lastdream2013/userChrome/master/blur2revertMod.uc.js
+%s% https://raw.github.com/lastdream2013/userChrome/master/qrCreatorOnline.uc.js
+%s% https://raw.github.com/lastdream2013/userChrome/master/qrReader.uc.js
+%s% https://raw.github.com/lastdream2013/userChrome/master/sendToGmail.uc.js
+%s% https://raw.github.com/lastdream2013/userChrome/master/showLocationModSpecial.uc.js
+%s% https://raw.github.com/lastdream2013/userChrome/master/urlfilterfast.uc.js
+%s% https://raw.github.com/lastdream2013/userChromeJS/master/KeyChanger/KeyChanger.uc.js
+%s% https://raw.github.com/ywzhaiqi/userChromeJS/master/AddonsPage/AddonsPage.uc.js
+%s% https://raw.github.com/ywzhaiqi/userChromeJS/master/ExternalVideoPlayer/ExternalVideoPlayer.uc.js
+%s% https://raw.github.com/ywzhaiqi/userChromeJS/master/JSCSS_Highlight.uc.js
+%s% https://raw.github.com/ywzhaiqi/userChromeJS/master/SidebarModfix/SidebarModfix.uc.js
+%s% https://raw.github.com/ywzhaiqi/userChromeJS/master/addmenuPlus/addMenuPlus.uc.js
+%s% https://raw.github.com/ywzhaiqi/userChromeJS/master/moveButton/moveButton.uc.js
+%s% https://raw.github.com/ywzhaiqi/userChromeJS/master/textLink.uc.js
+%s% https://raw.github.com/ywzhaiqi/userChromeJS/master/uAutoPagerize/SITEINFO_Writer.uc.js
+%s% https://raw.github.com/ywzhaiqi/userChromeJS/master/uAutoPagerize/uAutoPagerize.uc.js
+wget -c -N -P profile\chrome\SubScript http://www.quchao.com/projects/mozilla/firefox/userchrome_js/singletonFox.uc.js
+wget -c -N -P profile\chrome\SubScript http://files.cnblogs.com/ziyunfei/locationbar.uc.js
+wget -c -N -P profile\chrome\SubScript http://files.cnblogs.com/ziyunfei/OpenMultipleFilesWhenDrop.uc.js
+wget -c -N -P profile\chrome\SubScript http://files.cnblogs.com/ziyunfei/CopyGIF.uc.js
+wget -c -N -P profile\chrome\SubScript http://files.cnblogs.com/ziyunfei/ExtendedCopyMenu.uc.js
+%n% https://raw.github.com/kwoktree/BrowserU/master/pac/iProxy.pac
+%n% https://raw.github.com/kwoktree/FireFoxU/master/readme.txt
+%n% -P profile https://raw.github.com/kwoktree/FireFoxU/master/permissions.sqlite
+%n% -P profile https://raw.github.com/kwoktree/FireFoxU/master/search-metadata.json
+%n% -P profile https://raw.github.com/kwoktree/FireFoxU/master/user.js
+%n% -P profile\chrome https://raw.github.com/alice0775/userChrome.js/master/000-windowhook.uc.js
+%n% -P profile\chrome https://raw.github.com/kwoktree/FireFoxU/master/userChrome.css
+%n% -P profile\chrome https://raw.github.com/kwoktree/OperaU/master/urlfilter.ini
+%n% -P profile\chrome https://raw.github.com/lastdream2013/userChrome/master/UserScriptLoader.uc.js
+%n% -P profile\chrome https://raw.github.com/ywzhaiqi/userChromeJS/master/uAutoPagerize/_uAutoPagerize.js
+%n% -P profile\chrome https://raw.github.com/ywzhaiqi/userChromeJS/master/userChrome.js
+%n% -O profile\chrome\userMenu\ColorfulTab.uc.jsx https://raw.github.com/ardiman/userChrome.js/master/colorfultab/ColorfulTab.uc.js
+%x%ExportHTMLFolder.uc.xul https://raw.github.com/lastdream2013/userChrome/master/ExportHTMLFolder.uc.xul
+%x%JSOff.uc.xul https://raw.github.com/ywzhaiqi/userChromeJS/master/JSOff.uc.xul
+%x%NextPage.uc.xul https://j.mozest.com/zh-CN/ucscript/script/5.uc.xul
+%x%backup\SnapLinksMod.uc.xul https://raw.github.com/lastdream2013/userChrome/master/SnapLinksMod.uc.xul
+%x%bbsWater.uc.xul https://raw.github.com/ywzhaiqi/userChromeJS/master/论坛灌水.uc.xul
+%n% -P profile\chrome\CSS https://raw.github.com/kwoktree/BrowserU/master/css/AdFilter.css
+%n% -P profile\chrome\CSS https://raw.github.com/kwoktree/BrowserU/master/css/BBS.css
+%n% -P profile\chrome\CSS https://raw.github.com/kwoktree/BrowserU/master/css/YaHei.css
 msg %username% /time:3 "【数据已更新！】" & exit
 
 :opupdate
