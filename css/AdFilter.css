@@ -3,10 +3,10 @@
 
 /*
 Name: /广告过滤
-Version: 5.2.2.1
+Version: 5.2.2.2
 Author: KwokTree
 Url: https://raw.github.com/kwoktree/BrowserU/master/css/AdFilter.css
-Lastchage: 13:37 2013/8/30
+Lastchage: 10:02 2013/9/4
 Description: MayBe a better User CSS Help U.
 */
 
@@ -86,7 +86,7 @@ div[class="adrr"],div[class^="adRight"],div[id^="RightAd"],div[id$="ightDiv"],di
 display: none !important;
 	}
 div[id="leftsp"],div[id^="ad-right"],div[id^="rightAd"],div[id$="rightad"],div[id^="AdRight"],div[id$="tCoupletId"],div[class*=" video-couplet-"],div[id^="followDiv"],
-div[id="rightsp"],div[id^="ad-left"],div[id^="adLeft"],div[id^="ad_right"],div[class^="RightAD"],div[class^="rightad"],div[class*="_right_side"]{
+div[id="rightsp"],div[id^="ad-left"],div[id^="adLeft"],div[id^="ad_right"],div[class^="RightAD"],div[class^="rightad"],div[id^="gg_couplet"],div[class*="_right_side"]{
 display: none !important;
 	}
 div[class^="Indexad"],div[class*="inner_ad"],div[class^="double_ad"],div[class^="footad"],div[class^="footer_adv"],div[class*="foot-ad"],
