@@ -1,5 +1,5 @@
 @echo off
-set ver=1.0.4.1F
+set ver=1.0.5.2D
 SetLocal EnableExtensions
 SetLocal EnableDelayedExpansion
 set k=taskkill /f /t /im
@@ -205,10 +205,10 @@ wget -c -N --no-check-certificate -P profile\chrome\lib https://raw.github.com/l
 %s% https://raw.github.com/ywzhaiqi/userChromeJS/master/uAutoPagerize/SITEINFO_Writer.uc.js
 %s% https://raw.github.com/ywzhaiqi/userChromeJS/master/uAutoPagerize/uAutoPagerize.uc.js
 wget -c -N -P profile\chrome\SubScript http://www.quchao.com/projects/mozilla/firefox/userchrome_js/singletonFox.uc.js
-wget -c -N -P profile\chrome\SubScript http://files.cnblogs.com/ziyunfei/locationbar.uc.js
+rem wget -c -N -P profile\chrome\SubScript http://files.cnblogs.com/ziyunfei/locationbar.uc.js
 wget -c -N -P profile\chrome\SubScript http://files.cnblogs.com/ziyunfei/OpenMultipleFilesWhenDrop.uc.js
 wget -c -N -P profile\chrome\SubScript http://files.cnblogs.com/ziyunfei/CopyGIF.uc.js
-wget -c -N -P profile\chrome\SubScript http://files.cnblogs.com/ziyunfei/ExtendedCopyMenu.uc.js
+rem wget -c -N -P profile\chrome\SubScript http://files.cnblogs.com/ziyunfei/ExtendedCopyMenu.uc.js
 %n% https://raw.github.com/kwoktree/BrowserU/master/pac/iProxy.pac
 %n% https://raw.github.com/kwoktree/FireFoxU/master/readme.txt
 %n% -P profile https://raw.github.com/kwoktree/FireFoxU/master/permissions.sqlite
@@ -216,6 +216,7 @@ wget -c -N -P profile\chrome\SubScript http://files.cnblogs.com/ziyunfei/Extende
 %n% -P profile https://raw.github.com/kwoktree/FireFoxU/master/user.js
 %n% -P profile\chrome https://raw.github.com/alice0775/userChrome.js/master/000-windowhook.uc.js
 %n% -P profile\chrome https://raw.github.com/kwoktree/FireFoxU/master/userChrome.css
+%n% -P profile\chrome https://raw.github.com/kwoktree/FireFoxU/master/userContent.css
 %n% -P profile\chrome https://raw.github.com/kwoktree/OperaU/master/urlfilter.ini
 %n% -P profile\chrome https://raw.github.com/lastdream2013/userChrome/master/UserScriptLoader.uc.js
 %n% -P profile\chrome https://raw.github.com/ywzhaiqi/userChromeJS/master/uAutoPagerize/_uAutoPagerize.js
