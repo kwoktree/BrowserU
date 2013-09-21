@@ -3,10 +3,10 @@
 // @author NLF & dingdong,jiayiming,青蛙傻傻,ttony,wangjieest,wukon,kwoktree
 // @description  Super_preloader的数据库文件,无法单独使用.
 // @create 2010-12-21
-// @lastmodified 19:40 2013/8/18
+// @lastmodified 9:31 2013/9/21
 // @version 1.0.3.12
 // @namespace  http://userscripts.org/users/vokins
-// @download  http://simpleu.googlecode.com/svn/trunk/scripts/Super_preloader.db.js
+// @download  https://raw.github.com/kwoktree/BrowserU/master/scripts/Super_preloader.db.js
 // @downloadURL https://userscripts.org/scripts/source/142198.user.js
 // @run-at    document-start
 // @include http*
@@ -912,7 +912,7 @@
 			}
 		},
 		{siteName:'Discuz X2.5修复',
-			url:/^http?:\/\/(bbs.gfan|bbs.xda|bbs.xiaomi|www.diypda|f.ppxclub|bbs.sd001|bbs.itiankong)\.(com|cn)/i,
+			url:/^http?:\/\/(bbs.gfan|bbs.xda|bbs.xiaomi|www.weiqitv|www.diypda|f.ppxclub|bbs.sd001|bbs.itiankong)\.(com|cn)/i,
 			nextLink:'auto;',
 			autopager:{
 				pageElement:'//div[@id="threadlist"] | //div[@id="postlist"]',
@@ -988,6 +988,13 @@
 			nextLink:'auto;',
 			autopager:{
 				pageElement:'//div[@class="z threadCommon"] | //div[@class="mb10 bodd"]',
+			}
+		},
+		{siteName:'阡陌居',
+			url:/http:\/\/www\.1000qm\.com\/(?:thread\.php\?fid\-\d+|read\.php\?tid\-\d+)\.html/i,
+			nextLink:'auto;',
+			autopager:{
+				pageElement:'//div[@class="z threadCommon"] | //div[@id="pw_content"][@class="mb10"]',
 			}
 		},
 		{siteName:'煎蛋首页',
