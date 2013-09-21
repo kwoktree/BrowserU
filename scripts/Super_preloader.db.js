@@ -4,7 +4,7 @@
 // @description  Super_preloader的数据库文件,无法单独使用.
 // @create 2010-12-21
 // @lastmodified 9:31 2013/9/21
-// @version 1.0.3.12
+// @version 1.0.3.13
 // @namespace  http://userscripts.org/users/vokins
 // @download  https://raw.github.com/kwoktree/BrowserU/master/scripts/Super_preloader.db.js
 // @downloadURL https://userscripts.org/scripts/source/142198.user.js
