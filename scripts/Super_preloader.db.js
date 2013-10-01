@@ -3,8 +3,8 @@
 // @author NLF & dingdong,jiayiming,青蛙傻傻,ttony,wangjieest,wukon,kwoktree
 // @description  Super_preloader的数据库文件,无法单独使用.
 // @create 2010-12-21
-// @lastmodified 9:31 2013/9/21
-// @version 1.0.3.13
+// @lastmodified 11:45 2013/10/1
+// @version 1.0.3.14
 // @namespace  http://userscripts.org/users/vokins
 // @download  https://raw.github.com/kwoktree/BrowserU/master/scripts/Super_preloader.db.js
 // @downloadURL https://userscripts.org/scripts/source/142198.user.js
@@ -919,7 +919,7 @@
 			}
 		},
 		{siteName:'Discuz 页面跳转修复',
-			url:/^http:\/\/(bbs.pcbeta|bbs.besgold|www.pt80)\.com/i,
+			url:/^http:\/\/(bbs.pcbeta|bbs.besgold|www.pt80)\.(com|net)/i,
 			nextLink:'//div[@class="pg"]/descendant::a[@class="nxt"]',
 			autopager:{
 				useiframe:false,
